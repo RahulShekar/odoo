@@ -3,7 +3,7 @@ pipeline{
   stages{
     satge('Git SCM'){
       sh '''
-        git url "https://github.com/vpolice3/odoo.git"
+        git url "https://github.com/RahulShekar/odoo.git"
       '''
     }
   }
