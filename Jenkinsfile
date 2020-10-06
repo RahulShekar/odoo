@@ -1,19 +1,29 @@
 pipeline {
-    agent { docker { image 'python:3.5.1' } }
+    agent any
     stages {
-        stage('build') {
+        stage('Build') {
             steps {
-                sh 'python --version'
+                echo "Building Project"
             }
         }
-        stage('Test') {
+        stage('Archive') {
             steps {
-                sh 'python --version'
+                echo "Archiving Project"
             }
         }
-        stage('Deploy') {
+        stage('Build Docker Image') {
             steps {
-                sh 'python --version'
+                echo "Building Docker Image"
+            }
+        }
+        stage('Push Docker Image') {
+            steps {
+                echo "Pushing Docker Image"
+            }
+        }
+        stage('Deploy to Dev') {
+            steps {
+                echo "Deploying to Dev Environment"
             }
         }
     }
